@@ -53,7 +53,7 @@ module.exports = function(grunt) {
                 }]
             }
         },
-        // GRUNT-UNCSS - remove unused styles; concatenates all CSS into distribution CSS file.
+        // GRUNT-UNCSS - remove unused styles; concatenates all CSS.
         uncss: {
             dist: {
                 files: {
@@ -94,7 +94,7 @@ module.exports = function(grunt) {
                 }]
             }
         },
-        // GRUNT-CONTRIB-HTMLMIN - minify HTML and inline JS; generate distribution HTML files.
+        // GRUNT-CONTRIB-HTMLMIN - minify HTML and inline JS
         htmlmin: {
             multiple: {
                 options: {

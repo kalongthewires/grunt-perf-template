@@ -3,10 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <title>Performance Template</title>
+    <!-- ** PLACE CSS FILES WITHIN THE 'build' COMMENTS BELOW ** -->
     <!-- build:css css/styles.css -->
     <link rel="stylesheet" href="css/styles.css">
     <!-- /build -->
     <script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+    <!-- ** PLACE JS FILES WITHIN THE 'build' COMMENTS BELOW ** -->
     <!-- build:js js/head/apphead.min.js -->
     <script src="js/picturefill.min.js" async></script>
     <!-- /build -->
@@ -30,13 +32,14 @@
         </div>
         <div class="row">
             <aside class="col-6 col-offset-3-md">
+            <!-- AJAX INCLUDE EXAMPLE -->
                 <h2>Secondary Content</h2>
                 <a href="secondary.html" data-replace="favorites.html" data-media="(min-width: 75em)">View Secondary Content (loaded asynchronously with Ajax-Include)</a>
             </aside>
         </div>
     </div>
 
-    <!-- AJAX INCLUDE -->
+    <!-- ** PLACE JS FILES WITHIN THE 'build' COMMENTS BELOW ** -->
     <!-- build:js js/app.min.js -->
     <script src="js/ajaxinclude.min.js"></script>
     <!-- /build -->
