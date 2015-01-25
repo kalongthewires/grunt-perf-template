@@ -25,4 +25,3 @@ When your files are in place, open up your terminal/command prompt and navigate 
 * [ajaxinclude.js](https://github.com/filamentgroup/Ajax-Include-Pattern) -> to asynchronously load less critical HTML. See the example in index.html to get an idea of how to put this to use!
 * [picturefill.js](https://github.com/scottjehl/picturefill) -> to allow use of the <picture> element across browsers.
 * Basic SASS file structure and defaults, including a grid system.
->>>>>>> 81dd11cdb51a9fb5230ec3b98a14bba4fcf2e05f
