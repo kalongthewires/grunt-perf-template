@@ -1,0 +1,65 @@
+/*
+ * Grid system
+ */
+
+// Edit the variables below to adjust the grid
+$num-columns: 12;
+$padding: $default-spacing-large;
+$breakpoint-md: em(900px);
+$breakpoint-lg: em(1200px);
+
+// DO NOT EDIT
+// ----------------------------------------------------------------------------
+$column-width: 100% / $num-columns;
+
+@function colWidth($column-index) {
+    @return $column-width * $column-index;
+}
+
+.row::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+[class*='col-'] {
+    float: left;
+    padding-left: $padding;
+    padding-right: $padding;
+    min-height: 1px;
+}
+
+/*! descending to take advantage of the cascade */
+@for $i from 1 through $num-columns {
+    // hackery because LibSass doesn't like descending @for loops [ can't do @for $i from $num-columns to 1 ]
+    $i: $num-columns - ($i - 1);
+
+    // for small screens
+    .col-#{$i} {
+        width: colWidth($i);
+    }
+
+    // for medium screens
+    @media (min-width: $breakpoint-md){
+        .col-#{$i}-md {
+            width: colWidth($i);
+        }
+        @if $i < $num-columns {
+            .col-offset-#{$i}-md {
+                margin-left: colWidth($i);
+            }
+        }
+    }
+
+    // for large screens
+    @media (min-width: $breakpoint-lg){
+        .col-#{$i}-lg {
+            width: colWidth($i);
+        }
+        @if $i < $num-columns {
+            .col-offset-#{$i}-lg {
+                margin-left: colWidth($i);
+            }
+        }
+    }
+}

@@ -1,0 +1,85 @@
+// SPACING --------------------------------------------------------------------
+$container-max-width: 1200px;
+
+// Functions for calculating spacing
+@function em($px, $em-base: 16px) {
+    @return $px / $em-base * 1em;
+}
+@function percent($value, $value-base: $container-max-width) {
+    @return $value / $value-base * 100%;
+}
+
+$default-spacing-x-small: em(3px);
+$default-spacing-small: em(5px);
+$default-spacing-medium: em(10px);
+$default-spacing-large: em(15px);
+
+
+// THEME ----------------------------------------------------------------------
+$color-primary: #fff;
+$color-dark: #211718;
+$color-medium: #454E62;
+$color-light: #958362;
+$color-bright: #B34B25;
+
+/* TYPOGRAPHY --------------------------------------------------------------- */
+$font-family-headings: Georgia, serif;
+$font-family-body: Helvetica, Arial, sans-serif;
+
+$font-size-small: em(13px);
+$font-size-medium: em(18px);
+$font-size-large: em(22px);
+
+$font-size-heading-small: em(24px);
+$font-size-heading-medium: em(36px);
+$font-size-heading-large: em(48px);
+
+body {
+    font-family: $font-family-body;
+}
+h2,
+h3 {
+    font-family: $font-family-headings;
+    line-height: 1.5em;
+}
+h1 {
+    font-size: $font-size-heading-medium;
+}
+h2 {
+    font-family: $font-family-body;
+    font-size: $font-size-heading-small;
+}
+
+
+/* ELEMENT DEFAULTS --------------------------------------------------------- */
+html {
+  box-sizing: border-box;
+}
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+img {
+    max-width: 100%;
+}
+a {
+    text-decoration: none;
+
+    &:hover {
+        text-decoration: underline;
+    }
+}
+ul {
+    padding: 0;
+
+    li {
+        list-style-type: none;
+    }
+}
+
+
+/* CONTAINER ---------------------------------------------------------------- */
+.wrapper {
+    margin: 0 auto;
+    max-width: $container-max-width;
+    width: 100%;
+}
